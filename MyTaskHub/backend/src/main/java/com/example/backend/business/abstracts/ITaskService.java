@@ -1,14 +1,22 @@
 package com.example.backend.business.abstracts;
 
+import com.example.backend.dto.requests.CreateTaskRequest;
+import com.example.backend.dto.requests.UpdateTaskRequest;
+import com.example.backend.dto.responses.GetAllTaskResponse;
+import com.example.backend.dto.responses.GetByIdTaskReponse;
 import com.example.backend.entities.Task;
 
 import java.util.List;
 
 public interface ITaskService {
 
-    List<Task> getAAll();
-    Task getById(Integer id);
-    Task save(Task task);
+    List<GetAllTaskResponse> getAAll();
+
+    GetByIdTaskReponse getById(Integer id);
+
+    CreateTaskRequest create(CreateTaskRequest createTaskRequest);
+
     void delete(Integer id);
-    Task update( Integer id,Task task);
+
+    UpdateTaskRequest update(Integer id, UpdateTaskRequest updateTaskRequest);
 }

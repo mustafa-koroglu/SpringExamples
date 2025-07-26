@@ -12,22 +12,22 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="tasks")
+@Table(name = "tasks")
 public class Task {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name="title")
+    @Column(name = "title")
     private String title;
 
-    @Column(name="description")
+    @Column(name = "description")
     private String description;
 
-    @Column(name="due_date")
+    @Column(name = "due_date")
     private LocalDate dueDate;
 
-    @Column(name="status")
+    @Column(name = "status")
     private boolean status;
 }
